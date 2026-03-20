@@ -52,6 +52,17 @@ namespace MasterDev
             Console.WriteLine("Área del círculo: " + circulo.CalcularArea());
             Console.WriteLine("Área del rectángulo: " + rectangulo.CalcularArea());
 
+            CuentaBancaria cuenta = new CuentaBancaria();
+
+            cuenta.Depositar(5500);
+            Console.WriteLine("Saldo actual: " + cuenta.ObtenerSaldo());
+
+            bool retiro = cuenta.Retirar(500);
+            Console.WriteLine("¿Retiro exitoso? " + retiro);
+
+            Console.WriteLine("Saldo final: " + cuenta.ObtenerSaldo());
+
+
             Console.WriteLine();
             Console.WriteLine("Presiona una tecla para salir...");
             Console.ReadKey();
