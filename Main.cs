@@ -50,8 +50,8 @@ namespace MasterDev
 
 
 
-            Console.WriteLine("Área del círculo: " + circulo.calcularArea());
-            Console.WriteLine("Área del rectángulo: " + rectangulo.calcularArea());
+            Console.WriteLine("Área del círculo: " + circulo.CalcularArea());
+            Console.WriteLine("Área del rectángulo: " + rectangulo.CalcularArea());
 
         }
     }
