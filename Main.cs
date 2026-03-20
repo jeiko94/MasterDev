@@ -1,9 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace MasterDev
+﻿namespace MasterDev
 {
-    internal class Program
+    public class Program
     {
         static async Task Main(string[] args)
         {
