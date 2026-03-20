@@ -1,4 +1,8 @@
-﻿namespace MasterDev
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace MasterDev
 {
     public class Program
     {
@@ -9,8 +13,12 @@
 
             List<Empleado> empleados = new List<Empleado>();
 
-            new EmpleadoFijo("Ana", 2000);
-            new EmpleadoPorHoras("Luis", 40, 25);
+            var emp1 = new EmpleadoFijo("Ana", 2000);
+            var emp2 = new EmpleadoPorHoras("Luis", 40, 25);
+
+            // Añadir empleados a la lista para conservar y mostrar su estado
+            empleados.Add(emp1);
+            empleados.Add(emp2);
 
             Circulo circulo = new Circulo(5);
             Rectangulo rectangulo = new Rectangulo(4, 6);
@@ -26,30 +34,27 @@
 
             Console.WriteLine();
 
-
-
-            Console.WriteLine(await perro.HacerSonido(null)); 
-            Console.WriteLine(await gato.HacerSonido(null));  
-            Console.WriteLine(await vaca.HacerSonido(null));  
+            // Evitar pasar null a parámetros no anulables
+            Console.WriteLine(await perro.HacerSonido(string.Empty));
+            Console.WriteLine(await gato.HacerSonido(string.Empty));
+            Console.WriteLine(await vaca.HacerSonido(string.Empty));
 
             Console.WriteLine();
-            Console.WriteLine("Presiona una tecla para salir...");
-            Console.ReadKey();
 
-
-
-            foreach (Empleado emp in empleados)
+            // Mostrar cada empleado en la lista
+            foreach (var emp in empleados)
             {
                 Console.WriteLine($"Empleado: {emp.Nombre}");
                 Console.WriteLine($"Salario: {emp.CalcularSalario()}");
                 Console.WriteLine("----------------------");
             }
 
-
-
             Console.WriteLine("Área del círculo: " + circulo.CalcularArea());
             Console.WriteLine("Área del rectángulo: " + rectangulo.CalcularArea());
 
+            Console.WriteLine();
+            Console.WriteLine("Presiona una tecla para salir...");
+            Console.ReadKey();
         }
     }
 }
