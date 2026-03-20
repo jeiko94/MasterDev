@@ -14,6 +14,8 @@ namespace MasterDev
             new EmpleadoFijo("Ana", 2000);
             new EmpleadoPorHoras("Luis", 40, 25);
 
+            Circulo circulo = new Circulo(5);
+            Rectangulo rectangulo = new Rectangulo(4, 6);
 
             // Ejecutar operaciones y mostrar resultados
             Console.WriteLine("Incrementar(): " + contador.Incrementar()); // -> 1
@@ -32,6 +34,12 @@ namespace MasterDev
                 Console.WriteLine($"Salario: {emp.CalcularSalario()}");
                 Console.WriteLine("----------------------");
             }
+
+
+
+            Console.WriteLine("Área del círculo: " + circulo.calcularArea());
+            Console.WriteLine("Área del rectángulo: " + rectangulo.calcularArea());
+
         }
     }
 }
