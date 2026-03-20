@@ -1,4 +1,7 @@
-public abstract class Figura
+namespace MasterDev
 {
-    public abstract double CalcularArea();
+    public abstract class Figura
+    {
+        public abstract double CalcularArea();
+    }
 }

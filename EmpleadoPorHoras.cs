@@ -1,18 +1,21 @@
-public class EmpleadoPorHoras : Empleado
+namespace MasterDev
 {
-    private int horas;
-    private double valorHora;
-
-    public EmpleadoPorHoras(string nombre, int horas, double valorHora)
-        : base(nombre)
+    public class EmpleadoPorHoras : Empleado
     {
-        this.horas = horas;
-        this.valorHora = valorHora;
-    }
+        private int horas;
+        private double valorHora;
 
-    // Override del método
-    public override double CalcularSalario()
-    {
-        return horas * valorHora;
+        public EmpleadoPorHoras(string nombre, int horas, double valorHora)
+            : base(nombre)
+        {
+            this.horas = horas;
+            this.valorHora = valorHora;
+        }
+
+        // Override del método
+        public override double CalcularSalario()
+        {
+            return horas * valorHora;
+        }
     }
 }

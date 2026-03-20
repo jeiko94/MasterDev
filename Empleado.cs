@@ -1,16 +1,18 @@
-﻿using System;
-
-public class Empleado
+﻿namespace MasterDev
 {
-    public string Nombre { get; set; }
-
-    public Empleado(string nombre)
+    public class Empleado
     {
-        Nombre = nombre;
-    }
+        public string Nombre { get; set; }
 
-    public virtual double CalcularSalario()
-    {
-        return 0;
+        public Empleado(string nombre)
+        {
+            Nombre = nombre;
+        }
+
+        public virtual double CalcularSalario()
+        {
+            return 0;
+        }
     }
 }
+

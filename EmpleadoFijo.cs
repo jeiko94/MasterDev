@@ -1,15 +1,18 @@
-public class EmpleadoFijo : Empleado
+namespace MasterDev
 {
-    private double salarioFijo;
-
-    public EmpleadoFijo(string nombre, double salarioFijo)
-        : base(nombre)
+    public class EmpleadoFijo : Empleado
     {
-        this.salarioFijo = salarioFijo;
-    }
+        private double salarioFijo;
 
-    public override double CalcularSalario()
-    {
-        return salarioFijo;
+        public EmpleadoFijo(string nombre, double salarioFijo)
+            : base(nombre)
+        {
+            this.salarioFijo = salarioFijo;
+        }
+
+        public override double CalcularSalario()
+        {
+            return salarioFijo;
+        }
     }
 }

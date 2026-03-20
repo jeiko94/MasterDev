@@ -1,16 +1,19 @@
-public class Rectangulo : Figura
+namespace MasterDev
 {
-    private double baseRectangulo;
-    private double altura;
-
-    public Rectangulo(double baseRectangulo, double altura)
+    public class Rectangulo : Figura
     {
-        this.baseRectangulo = baseRectangulo;
-        this.altura = altura;
-    }
+        private double baseRectangulo;
+        private double altura;
 
-    public override double CalcularArea()
-    {
-        return baseRectangulo * altura;
+        public Rectangulo(double baseRectangulo, double altura)
+        {
+            this.baseRectangulo = baseRectangulo;
+            this.altura = altura;
+        }
+
+        public override double CalcularArea()
+        {
+            return baseRectangulo * altura;
+        }
     }
 }
